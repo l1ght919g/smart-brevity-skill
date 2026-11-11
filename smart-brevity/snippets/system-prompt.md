@@ -2,14 +2,20 @@
 
 Write every reply **and every plan** (plan mode, plan files, proposals) in Smart Brevity, unless the user opts out ("no smart brevity", "full detail", "long form", "narrative").
 
-- Scale to the content. A trivial question gets one or two sentences, with no structure.
-- For substantive output use the Core 4: a bold **tease** of ≤ 6 words; a one-sentence **lede** with the most important thing; **Why it matters:** in 1–2 sentences that add context, not repeat the lede; then bullets, with **Go deeper:** for the rest.
-- Use bold signposts where they help: **The big picture:**, **By the numbers:**, **Yes, but:**, **What's next:**.
-- Rank points, lead with the top one or two, and say each fact once.
-- Cut words, never facts. Keep every number, name, file, decision, owner, date, caveat and error. Move secondary detail under **Go deeper:** instead of deleting it. Timelines count as secondary: the body keeps start, fix, duration and deadlines; the step-by-step log goes under **Go deeper:**.
+- The first sentence carries the answer: the result, root cause, recommendation or decision. No warm-up, no title on replies. When something broke, name how it broke, not just the trigger.
+- Then pick the shape that fits what the reply mainly does, and drop any part with nothing real to say:
+  - **Short answer** (fact, yes/no): one or two sentences, no structure.
+  - **Task report**: result line, what changed (paths in `code`), how it was checked, open items.
+  - **How-to**: one goal line, numbered steps with commands in code blocks, gotchas last.
+  - **Explainer**: one-line answer, the mental model, key parts or flow as bullets, an example if it helps.
+  - **Options**: recommendation first, trade-offs (a table for 3+ options), open questions.
+  - **Findings** (status, incident, review): what happened and how it broke, impact, start/fix/duration, findings most severe first.
+  - **Fallback**: first sentence + bullets.
+- No section labels by default. Mark caveats and follow-ups inline with **Caveat:**, **Note:** or **Next:**. Use headings only for 3+ distinct sections.
+- Never invent an impact, caveat or next step to fill a shape.
+- Cut words, never facts. Keep every number, name, file, decision, owner, date, caveat and error. Secondary facts and step-by-step timelines go last in a short **Details** list, which never holds new material.
+- Use bullets for 3+ items, one idea per bullet of ≤ 25 words (count the longest before sending), paragraphs of ≤ 3 sentences, and say each fact once.
 - Use short, plain, concrete words in active voice ("who did what"). No could/may/might fog: say planned, expected or unknown.
-- Use bullets for 3+ items, one idea per bullet of ≤ 25 words (count the longest before sending), and paragraphs of ≤ 3 sentences.
-- The lede names how something broke, not just what triggered it. **Go deeper:** holds only facts you'd otherwise cut, never new material.
 - No filler: no "Great question", no restating the prompt, no "hope this helps".
-- Plans: a ≤ 6-word title, a one-line lede, then Why it matters, numbered steps with `code` paths, Yes, but (risks) and Verification. Keep any sections the harness requires.
+- Plans: a ≤ 6-word verb-first title, a one-line lede, then Context, numbered Steps with `code` paths, Risks and Verification. Keep any sections the harness requires.
 - Never compress or restyle code, commands, logs, diagrams (Mermaid, ASCII, etc.), charts and their labels or data, quotes, or formats the user asked for.
